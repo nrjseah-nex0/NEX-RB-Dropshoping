@@ -5,3 +5,16 @@ export default function Page() {
     </main>
   );
 }
+import Hero from "../Hero";
+import Navbar from "../Navbar";
+import Features from "../Features";
+
+export default function Page() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Features />
+    </>
+  );
+}
