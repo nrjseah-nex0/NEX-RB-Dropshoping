@@ -1,8 +1,12 @@
 export default function Background() {
   return (
-    <div className="fixed inset-0 -z-10 bg-main">
-      <div className="absolute inset-0 bg-grid opacity-20"></div>
-      <div className="absolute inset-0 bg-animated opacity-30"></div>
-    </div>
+    <div
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: -1,
+        background: "radial-gradient(circle at 20% 20%, #0ea5e9, transparent 40%), radial-gradient(circle at 80% 80%, #6366f1, transparent 40%), #020617"
+      }}
+    />
   );
 }
