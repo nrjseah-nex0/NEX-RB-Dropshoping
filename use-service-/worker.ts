@@ -3,7 +3,27 @@ import { toast } from "sonner";
 
 export function useServiceWorker() {
   const toastShown = useRef(false);
+export default {
+  async fetch(request: Request) {
+    const url = new URL(request.url);
 
+    if (url.pathname === "/api/health") {
+      return new Response(JSON.stringify({ status: "ok" }), {
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    if (url.pathname === "/api/track") {
+      return new Response(JSON.stringify({
+        message: "Tracking event saved"
+      }), {
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    return new Response("Not Found", { status: 404 });
+  },
+};
   useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
 
