@@ -10,7 +10,16 @@ import KPICards from "./_components/KPICards.tsx";
 import SalesChart from "./_components/SalesChart.tsx";
 import SetupChecklist from "./_components/SetupChecklist.tsx";
 import QuickActions from "./_components/QuickActions.tsx";
+import Background from "./components/Background";
 
+export default function Page() {
+  return (
+    <>
+      <Background />
+      {/* باقي الصفحة */}
+    </>
+  );
+}
 const MONTHS = [
   "يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو",
   "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر",
