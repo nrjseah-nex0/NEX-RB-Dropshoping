@@ -28,3 +28,13 @@ function AppRoutes() {
     </DefaultProviders>
   );
 }
+import Background from "./components/Background";
+
+export default function App() {
+  return (
+    <>
+      <Background />
+      {/* باقي الموقع */}
+    </>
+  );
+}
